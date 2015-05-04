@@ -14,4 +14,12 @@ def creature
 
 end
 
+def idnum
+
+  @idnum = params[:idnum]
+  @creature = Zodiac.find_by({:id => @idnum}).fortune.capitalize
+  @fortune = Zodiac.find_by({:id => @idnum}).fortune.capitalize
+  @sign = Zodiac.find_by({:id => @idnum}).sign.capitalize
+end
+
 end

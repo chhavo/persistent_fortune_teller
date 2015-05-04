@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   get("/creatures/:the_creature", { :controller => "zodiacs", :action => "creature" })
 
+get("/zodiacs/:idnum", { :controller => "zodiacs", :action => "idnum" })
+
   get("/random/:num1/:num2", { :controller => "fortunes", :action => "random" })
 end
